@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan Media Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>4chan Media Downloader</h2>
+    <form method="POST">
+        <label for="url">4chan GIFs Link:</label>
+        <input type="text" id="url" name="url" required>
+
+        <fieldset>
+            <legend>Select Media Types:</legend>
+            <label><input type="checkbox" name="media_types" value="gif"> GIF</label>
+            <label><input type="checkbox" name="media_types" value="webm"> WEBM</label>
+            <label><input type="checkbox" name="media_types" value="mp4"> MP4</label>
+            <label><input type="checkbox" name="media_types" value="all"> All</label>
+        </fieldset>
+
+        <button type="submit">Collect</button>
+    </form>
+</body>
+</html>
